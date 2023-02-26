@@ -18,6 +18,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <C.FeatureCardWrapper>
       <C.FeatureCardInner variant={variant}>{icon}</C.FeatureCardInner>
+      {/*  */}
       <C.FeatureCardLable>{label}</C.FeatureCardLable>
     </C.FeatureCardWrapper>
   );
