@@ -2,14 +2,14 @@ import React from "react";
 import { useRouter } from "next/router";
 
 // components
-import { IconButton, Badge } from "@/common";
+import { IconButton, Badge, Input } from "@/common";
 import * as C from "./styles";
 
 // types
 import { Menu } from "@/types";
 
 // icons
-import { IAlert, IWallet, IUser } from "@/common/svg";
+import { IAlert, IWallet, IUser, ISearch, IShortkey } from "@/common/svg";
 
 const menus: Menu[] = [
   {
@@ -55,6 +55,15 @@ export const Header: React.FC = () => {
           </C.NavLink>
         ))}
       </C.Nav>
+
+      {/* search */}
+      <C.SearchWrapper>
+        <Input
+          placeholder="Find Holders"
+          leftIcon={<ISearch />}
+          rightIcon={<IShortkey />}
+        />
+      </C.SearchWrapper>
 
       <C.RightTools>
         {/* badge */}

@@ -52,3 +52,8 @@ export const ComingSoon = styled.span.attrs({
 export const RightTools = styled.div.attrs({
   className: "flex items-center space-x-8 ml-auto",
 })``;
+
+// search
+export const SearchWrapper = styled.div.attrs({
+  className: "flex w-2/5 mx-1",
+})``;
