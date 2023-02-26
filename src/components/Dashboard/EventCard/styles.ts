@@ -12,12 +12,11 @@ const eventStatusPallate = {
 };
 
 export const EventCardWrapper = styled.div.attrs({
-  className: "relative overflow-hidden",
+  className: "relative overflow-hidden shadow-md rounded-lg",
 })``;
 
 export const EventCardInner = styled.div.attrs({
-  className:
-    "relative flex gap-8 bg-white/80 backdrop-blur-xl rounded-lg shadow-md overflow-hidden",
+  className: "relative flex gap-8 bg-white/80 backdrop-blur-xl",
 })``;
 
 export const EventCardDetail = styled.div.attrs({
