@@ -1,16 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 
 // components
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { AppWrapper, ContentWrapper } from "./styles";
 
-const AppWrapper = styled.div.attrs({ className: "" })``;
+interface AppLayoutProps {
+  children: React.ReactNode;
+}
 
-const AppLayout: React.FC = () => {
+const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
     <AppWrapper>
       <Header />
+      <ContentWrapper>{children}</ContentWrapper>
       <Footer />
     </AppWrapper>
   );

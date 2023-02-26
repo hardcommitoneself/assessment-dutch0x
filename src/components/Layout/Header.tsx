@@ -59,6 +59,7 @@ export const Header: React.FC = () => {
       <C.RightTools>
         {/* badge */}
         <Badge label="Status" variant="success" />
+
         <IconButton icon={IAlert} />
         <IconButton icon={IWallet} />
         <IconButton icon={IUser} />

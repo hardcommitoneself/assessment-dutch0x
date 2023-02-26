@@ -1,8 +1,12 @@
 import React from "react";
 
 // components
-import { AppLayout } from "@/components";
+import { AppLayout, Dashboard } from "@/components";
 
 export default function Home() {
-  return <AppLayout></AppLayout>;
+  return (
+    <AppLayout>
+      <Dashboard />
+    </AppLayout>
+  );
 }

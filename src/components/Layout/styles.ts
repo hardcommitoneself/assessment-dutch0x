@@ -8,8 +8,14 @@ interface NavLinkProps {
 }
 
 // components
+
+// ---app layout
+export const AppWrapper = styled.div.attrs({ className: "" })``;
+export const ContentWrapper = styled.div.attrs({ className: "relative" })``;
+
+// ---header
 export const HeaderWrapper = styled.div.attrs({
-  className: "fixed top-0 left-0 w-full flex items-center p-6",
+  className: "fixed z-50 top-0 left-0 w-full flex items-center p-6",
 })``;
 
 export const Logo = styled(Image).attrs({ className: "" })``;
