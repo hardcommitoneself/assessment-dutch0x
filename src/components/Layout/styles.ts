@@ -15,7 +15,8 @@ export const ContentWrapper = styled.div.attrs({ className: "relative" })``;
 
 // ---header
 export const HeaderWrapper = styled.div.attrs({
-  className: "fixed z-50 top-0 left-0 w-full flex items-center p-6",
+  className:
+    "fixed z-50 top-0 left-0 w-full flex items-center p-6 backdrop-blur-sm",
 })``;
 
 export const Logo = styled(Image).attrs({ className: "" })``;

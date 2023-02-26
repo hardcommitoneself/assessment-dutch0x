@@ -3,6 +3,7 @@ import React from "react";
 // components
 import FeatureCard from "./FeatureCard";
 import EventCard from "./EventCard";
+import OverviewCard from "./OverviewCard";
 import * as C from "./styles";
 
 // icons
@@ -10,6 +11,7 @@ import { INFT, IHolder, IAirdrop, ITradeIn, ISales } from "@/common/svg";
 
 // types
 import { Event, EventStatus } from "@/types/event";
+import { Overview } from "@/types/overview";
 
 // mock data
 const events: Event[] = [
@@ -41,6 +43,56 @@ const events: Event[] = [
   },
 ];
 
+const overviews: Overview[] = [
+  {
+    items: [
+      {
+        name: "Wallet balance",
+        value: "0.489 ETH",
+      },
+    ],
+  },
+  {
+    title: "NFTs",
+    items: [
+      {
+        name: "NFT items",
+        value: "187",
+      },
+      {
+        name: "Collections",
+        value: "5",
+      },
+      {
+        name: "Minted",
+        value: "39",
+      },
+    ],
+  },
+  {
+    title: "Saved Searches",
+    items: [
+      {
+        name: "Green apple",
+      },
+      {
+        name: "Christmas tree",
+      },
+    ],
+  },
+  {
+    title: "Recent Activity",
+    items: [
+      {
+        name: "Settings > Account",
+      },
+      {
+        name: "Sales reports",
+      },
+    ],
+  },
+];
+
 const Dashboard: React.FC = () => {
   return (
     <C.DashbaordWrapper>
@@ -64,7 +116,14 @@ const Dashboard: React.FC = () => {
           </C.EventsContent>
         </C.Events>
 
-        <C.Overview></C.Overview>
+        <C.Overview>
+          <C.OverviewHeader>Overview</C.OverviewHeader>
+          <C.OverviewContent>
+            {overviews.map((overview, index) => (
+              <OverviewCard key={index} {...overview} />
+            ))}
+          </C.OverviewContent>
+        </C.Overview>
       </C.DashboardContent>
     </C.DashbaordWrapper>
   );

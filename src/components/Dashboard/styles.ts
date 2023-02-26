@@ -23,7 +23,15 @@ export const EventsContent = styled.div.attrs({
 
 // overview
 export const Overview = styled.div.attrs({
-  className: "relative w-1/4",
+  className: "relative flex flex-col gap-2 w-1/4",
+})``;
+
+export const OverviewHeader = styled.h1.attrs({
+  className: "text-2xl whitespace-nowrap text-black/50",
+})``;
+
+export const OverviewContent = styled.div.attrs({
+  className: "flex flex-col gap-6",
 })``;
 
 // banner
